@@ -23,7 +23,7 @@ for i in range(0,iterations):
 	# ... and train it on data from X and Y
 	clf = clf.fit(X,Y)
 	# make a prediction about a person with the following parameters
-	prediction = clf.predict([[190,70,43]])
+	prediction = clf.predict([[163,80,45]])
 	# if the person is male, increment count
 	if prediction == 'male':
 		count += 1
