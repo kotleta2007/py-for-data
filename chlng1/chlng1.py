@@ -1,4 +1,4 @@
-# Programming challenge #1.
+# Coding challenge #1.
 
 # import dependencies
 from sklearn import svm, neighbors
