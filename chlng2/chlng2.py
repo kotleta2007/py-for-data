@@ -1,7 +1,7 @@
 # Coding challenge #2.
 
 # import dependencies
-import tweepy
+import tweepy, csv
 from textblob import TextBlob
 
 # define topic of research
@@ -20,8 +20,13 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 public_tweets = api.search(topic)
-for tweet in public_tweets:
-    print(tweet.text)
-    analysis = TextBlob(tweet.text)
-    print(analysis.sentiment)
-    print("\n")
+
+with open('search_results.csv', mode='w', newline='') as csv_file:
+    writer = csv.writer(csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    writer.writerow(['Tweet', 'Polarity', 'Subjectivity'])
+    for tweet in public_tweets:
+        tweet_text = tweet.text
+        analysis = TextBlob(tweet_text).sentiment
+        writer.writerow([tweet_text, analysis.polarity, analysis.subjectivity])
+        
+csv_file.close()
