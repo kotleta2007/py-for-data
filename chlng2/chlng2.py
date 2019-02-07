@@ -8,10 +8,10 @@ from textblob import TextBlob
 topic = 'Trump'
 
 # Keys for the API
-consumer_key = "BDKT8ysWP1on2dCLVJblQfKkg"
-consumer_secret = "LkktmELrslMiX2PEuNa71O3G2v1XXbVl66GWBUugTTa0bAB1MJ"
-access_token = "826432687242088448-lQJyOx9QHe9wBrrYOcR7S2D2FpoGcpm"
-access_token_secret = "eZTDlmBho2FOi4tQwvNENKPhgkal8STdpVdmUwVuj3aUx"
+consumer_key = ""
+consumer_secret = ""
+access_token = ""
+access_token_secret = ""
 
 # Connecting to the API + authorization
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
