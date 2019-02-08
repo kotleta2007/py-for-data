@@ -1,7 +1,8 @@
-import csv
 import numpy as np
 
-r = np.genfromtxt("jester-data-1.csv")
+# Constructing a record array from CSV file
+r = np.genfromtxt("jester-data-1.csv", delimiter=',', dtype=None, encoding="utf8")
 
-#with open('jester-data-1.csv', mode='r', newline='') as csv_file:
-    #reader = csv.reader()
+# Printing array and its dimensions
+#print(r)
+#print(r.shape[0], r.shape[1])
