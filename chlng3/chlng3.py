@@ -1,3 +1,5 @@
+# NEED TO TEST DIFFERENT LOSS FUNCTIONS
+
 # Importing dependencies
 import numpy as np
 import scipy as sp
