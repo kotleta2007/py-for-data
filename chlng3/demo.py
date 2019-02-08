@@ -4,6 +4,8 @@ from lightfm import LightFM
 
 data = fetch_movielens(min_rating=4.0)
 
+print(data['train'])
+
 model = LightFM(loss='warp')
 model.fit(data['train'], epochs=30, num_threads=2)
 
