@@ -156,11 +156,13 @@ def main():
     layer = 'mixed4d_3x3_bottleneck_pre_relu'
     channel = 139
     
-    img0 = PIL.Image.open('gogol.jpg')
-    img0 = np.float32(img0)
+    for i in range(0,132):
+        name = 'data_vid/frame' + str(i) + '.jpg'
+        img0 = PIL.Image.open(name)
+        img0 = np.float32(img0)
     
-    #Step 4 - Apply gradient ascent to that layer
-    render_deepdream(tf.square(T('mixed4c')), img0)
+        #Step 4 - Apply gradient ascent to that layer
+        render_deepdream(tf.square(T('mixed4c')), img0)
     
 if __name__ == '__main__':
     main()
