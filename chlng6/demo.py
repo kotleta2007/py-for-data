@@ -25,4 +25,4 @@ tpot.fit(tele.drop('Class', axis=1).loc[training_indices].values, tele.loc[train
 tpot.score(tele.drop('Class', axis=1).loc[validation_indices].values, tele.loc[validation_indices, 'Class'].values)
 
 # Export the generated code
-tpot.export(pipeline.py)
+tpot.export('pipeline.py')
